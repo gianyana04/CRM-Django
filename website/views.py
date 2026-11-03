@@ -23,5 +23,7 @@ def home(request):
 def login_view(request):
     pass
 
-def logout_view(request):
-    pass
+def logout_user(request):
+    logout(request)
+    messages.success(request, 'Has cerrado sesión exitosamente.')
+    return redirect('home')
